@@ -16,8 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
    echo "Page not found or wrong HTTP request method is used"; exit();   
 }
 
-$request_body = file_get_contents('php://input')
-header('Content-Type: application/json')
+$request_body = file_get_contents('php://input');
+header('Content-Type: application/json');
 
 $charge_result = chargeAPI($api_url, $server_key, $request_body);
 
