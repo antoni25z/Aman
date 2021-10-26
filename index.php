@@ -7,12 +7,12 @@ $api_url = $isProduction ?
   'https//app.midtrans.com/snap/v1/transactions' : 
   'https://app.sandbox.midtrans.com/snap/v1/transactions';
 
-if (!strpos($_SERVER['REQUEST_URI'], '/charge')) {
+if (!strpos($_SERVER['REQUEST_URI'], '/charge')){
    http_response_code(404);
    echo "wrong path, make sure it's '/charge'"; exit();              
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST'){
    http_response_code(404);
    echo "Page not found or wrong HTTP request method is used"; exit();   
 }
@@ -33,7 +33,6 @@ function chargeAPI($api_url, $server_key, $request_body){
       CURLOPT_RETURNTRANSFER => 1,
       CURLOPT_POST => 1,
       CURLOPT_HEADER => 0,
-      //s
       CURLOPT_HTTPHEADER => array(
        'Content-Type: application/json',
        'Accept: application/json',
