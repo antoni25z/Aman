@@ -1,8 +1,8 @@
 <?php
 
-$server_key = "Mid-server-UXmZcc7zF8dYzRSgPZBb97Lp";
+$server_key = "SB-Mid-server-sHR9luM4a29xiJtNsOPdmQCG";
 
-$api_url = 'https//app.midtrans.com/snap/v1/transactions';
+$api_url = 'https://app.sandbox.midtrans.com/snap/v1/transactions';
 
 if (!strpos($_SERVER['REQUEST_URI'], '/charge')){
    http_response_code(404);
